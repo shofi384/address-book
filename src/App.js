@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './icon.png';
+import Addresses from './Addresses';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
             rel="noopener noreferrer"
           >Add Address</a>
         </header>
+        <Addresses/>
       </div>
     );
   }
