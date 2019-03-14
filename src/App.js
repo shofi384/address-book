@@ -6,6 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      hide: true,
       addressList: [
       {
         FirstName: "Cathy" ,
@@ -43,20 +44,36 @@ class App extends Component {
         Birthday: "9/10/1975",
         Telephone: "200-707-8670"
       }
-      ]};
+      ]
+    };
+
+    this.addAddress = this.addAddress.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   addAddress() {
-    //do nothing
+    this.setState({ hide: false });
+  }
+
+  handleSubmit() {
+    this.setState({ hide: true });
   }
 
   render() {
     const allAddress = this.state.addressList.map(address => 
       <div class='address'>
-        <div>{address.FirstName + ' ' + address.LastName}</div>
-        <div>{address.Birthday}</div>
-        <div>{address.Telephone}</div>
+        <div>Name: {address.FirstName + ' ' + address.LastName}</div>
+        <div>DOB: {address.Birthday}</div>
+        <div>Tel: {address.Telephone}</div>
       </div>);
+
+    const addressForm = (<form>
+        <input type='text' placeholder='First Name' required/>
+        <input type='text' placeholder='Last Name' required/>
+        <input type='text' placeholder='DOB' required/>
+        <input type='text' placeholder='Phone Number' required/>
+        <button type="submit" onClick={this.state.handleSubmit}></button>
+      </form>);
 
     return (
       <div className="App">
@@ -64,7 +81,7 @@ class App extends Component {
           <p><img src={logo} className="App-logo" alt="logo" />Create your personalized address book here!</p>
           <button onClick={this.addAddress}>+ New Address</button>
         </header>
-        <div id="addresses">{allAddress}</div>
+        {this.state.hide? <div id="addresses">{allAddress}</div>: <div>{addressForm}</div>}
       </div>
     );
   }
