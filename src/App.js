@@ -6,7 +6,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hide: true,
+      hideForm: true,
+
+      FirstName: '',
+      LastName: '',
+      Birthday: '',
+      Telephone: '',
+
       addressList: [
       {
         FirstName: "Cathy" ,
@@ -48,40 +54,59 @@ class App extends Component {
     };
 
     this.addAddress = this.addAddress.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
   addAddress() {
-    this.setState({ hide: false });
+    this.setState({ hideForm: false });
   }
 
-  handleSubmit() {
-    this.setState({ hide: true });
+  change = e => {
+    e.preventDefault();
+    this.state[e.target.name]= e.target.value;
+  }
+
+  submit = e => {
+    e.preventDefault();
+    let newAddress= {
+      FirstName: this.state.FirstName,
+      LastName: this.state.LastName,
+      Birthday: this.state.Birthday,
+      Telephone: this.state.Telephone
+    };
+    this.setState({
+      hideForm: true,
+      addressList: [newAddress, ...this.state.addressList]
+    });
+    this.setState({FirstName: ''});
+    this.setState({LastName: ''});
+    this.setState({Birthday: ''});
+    this.setState({Telephone: ''});
   }
 
   render() {
     const allAddress = this.state.addressList.map(address => 
-      <div class='address'>
+      <div className='container'>
         <div>Name: {address.FirstName + ' ' + address.LastName}</div>
         <div>DOB: {address.Birthday}</div>
         <div>Tel: {address.Telephone}</div>
       </div>);
 
-    const addressForm = (<form>
-        <input type='text' placeholder='First Name' required/>
-        <input type='text' placeholder='Last Name' required/>
-        <input type='text' placeholder='DOB' required/>
-        <input type='text' placeholder='Phone Number' required/>
-        <button type="submit" onClick={this.state.handleSubmit}></button>
+    const addressForm = (<form className='container' >
+        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change} required/>
+        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change} required/>
+        <input type='text' name='Birthday' placeholder='DOB' onChange={this.change} required/>
+        <input type='text' name='Telephone' placeholder='Phone Number' onChange={this.change} required/><br/>
+        <input type="submit" value="Submit" className='button' onClick={this.submit}/>
       </form>);
 
     return (
       <div className="App">
         <header className="App-header">
           <p><img src={logo} className="App-logo" alt="logo" />Create your personalized address book here!</p>
-          <button onClick={this.addAddress}>+ New Address</button>
+          {this.state.hideForm? <button className='button' onClick={this.addAddress}>+ New Address</button>: <br/>}
         </header>
-        {this.state.hide? <div id="addresses">{allAddress}</div>: <div>{addressForm}</div>}
+        {this.state.hideForm? <div className="addresses">{allAddress}</div>: <div>{addressForm}</div>}
       </div>
     );
   }
