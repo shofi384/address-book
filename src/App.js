@@ -55,6 +55,7 @@ class App extends Component {
 
     this.addAddress = this.addAddress.bind(this);
     this.submit = this.submit.bind(this);
+    this.delete = this.delete.bind(this);
   }
 
   addAddress() {
@@ -64,6 +65,13 @@ class App extends Component {
   change = e => {
     e.preventDefault();
     this.state[e.target.name]= e.target.value;
+  }
+
+  delete = (FirstName, e) => {
+    let addressList = [...this.state.addressList];
+    let deleteIndex = addressList.findIndex((item) => item.FirstName === FirstName);
+    addressList.splice(deleteIndex, 1);
+    this.setState({addressList: addressList});
   }
 
   submit = e => {
@@ -90,6 +98,7 @@ class App extends Component {
         <div>Name: {address.FirstName + ' ' + address.LastName}</div>
         <div>DOB: {address.Birthday}</div>
         <div>Tel: {address.Telephone}</div>
+        <button type="button" onClick={this.delete} class='delete'>Delete</button>
       </div>);
 
     const addressForm = (<form className='container' >

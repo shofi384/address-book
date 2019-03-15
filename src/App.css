@@ -5,19 +5,6 @@
   text-align: center;
 }
 
-.container {
-  margin: 2%;
-  text-align: left;
-  border: 10px;
-  border-style: solid;
-  border-color: #bfbfbf;
-  background-color: #feffdd;
-  padding: 3%;
-  color: #2d5929;
-  height: 40px;
-  width: 300px;
-}
-
 .App {
   text-align: center;
 }
@@ -53,7 +40,7 @@
   font-size: 20px;
 }
 
-button:hover {
+.button:hover {
   background-color: #3e8e41
 }
 
@@ -64,6 +51,28 @@ button:hover {
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  margin: 2%;
+  text-align: left;
+  border: 10px;
+  border-style: solid;
+  border-color: #bfbfbf;
+  background-color: #feffdd;
+  padding: 3%;
+  color: #2d5929;
+  height: 40px;
+  width: 300px;
+}
+
+.delete {
+  background-color: #f9885e;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: red;
 }
 
 input {
