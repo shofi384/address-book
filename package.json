@@ -2,7 +2,7 @@
   "name": "address-book",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/shofi384/address-book",
+  "homepage": "https://shofi384.github.io/address-book/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.4",
