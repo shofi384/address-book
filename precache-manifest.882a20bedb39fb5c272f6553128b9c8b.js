@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/address-book/static/css/main.50913d7c.chunk.css"
   },
   {
-    "revision": "98d0d432bd167eafa2ef7fc050043123",
+    "revision": "cb9d80327a992b43a298f0d0eff2b4c4",
     "url": "/address-book/index.html"
   }
 ];
