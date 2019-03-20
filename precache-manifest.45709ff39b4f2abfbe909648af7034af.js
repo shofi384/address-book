@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/shofi384/address-book/static/css/main.dd35c637.chunk.css"
   },
   {
-    "revision": "faaaf2efad452efba6835e7f89164aac",
+    "revision": "da2a378658b018b6e47e5851202c6719",
     "url": "/shofi384/address-book/index.html"
   }
 ];
