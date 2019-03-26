@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/address-book/static/js/runtime~main.43c8413f.js"
   },
   {
-    "revision": "cdc0a50887fbd0c1c9cc",
-    "url": "/address-book/static/js/main.01276363.chunk.js"
+    "revision": "6bf6e245ca8d782c3821",
+    "url": "/address-book/static/js/main.1de6a37d.chunk.js"
   },
   {
     "revision": "d5315e1752b87b4959df",
     "url": "/address-book/static/js/2.26a0c5bd.chunk.js"
   },
   {
-    "revision": "cdc0a50887fbd0c1c9cc",
+    "revision": "6bf6e245ca8d782c3821",
     "url": "/address-book/static/css/main.50913d7c.chunk.css"
   },
   {
-    "revision": "cb9d80327a992b43a298f0d0eff2b4c4",
+    "revision": "f24e23183dcc2fb116593f14efb54159",
     "url": "/address-book/index.html"
   }
 ];
