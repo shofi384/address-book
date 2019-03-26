@@ -55,7 +55,6 @@ class App extends Component {
 
     this.addAddress = this.addAddress.bind(this);
     this.submit = this.submit.bind(this);
-    this.delete = this.delete.bind(this);
   }
 
   addAddress() {
@@ -67,10 +66,9 @@ class App extends Component {
     this.state[e.target.name]= e.target.value;
   }
 
-  delete = (FirstName, e) => {
+  delete(key) {
     let addressList = [...this.state.addressList];
-    let deleteIndex = addressList.findIndex((item) => item.FirstName === FirstName);
-    addressList.splice(deleteIndex, 1);
+    addressList.splice(key, 1);
     this.setState({addressList: addressList});
   }
 
@@ -93,19 +91,19 @@ class App extends Component {
   }
 
   render() {
-    const allAddress = this.state.addressList.map(address => 
-      <div className='container'>
+    const allAddress = this.state.addressList.map((address, key) => 
+      <div key={key} className='container'>
         <div>Name: {address.FirstName + ' ' + address.LastName}</div>
         <div>DOB: {address.Birthday}</div>
         <div>Tel: {address.Telephone}</div>
-        <button type="button" onClick={this.delete} class='delete'>Delete</button>
+        <input type='button' className='delete' value='Remove' onClick={this.delete.bind(this, key)}/>
       </div>);
 
-    const addressForm = (<form className='container' >
-        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change} required/>
-        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change} required/>
-        <input type='text' name='Birthday' placeholder='DOB' onChange={this.change} required/>
-        <input type='text' name='Telephone' placeholder='Phone Number' onChange={this.change} required/><br/>
+    const addressForm = (<form className='container'>
+        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change} required />
+        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change} required />
+        <input type='date' name='Birthday' placeholder='DOB' onChange={this.change} required />
+        <input type='tel' name='Telephone' placeholder='Phone Number' onChange={this.change} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /><br/>
         <input type="submit" value="Submit" className='button' onClick={this.submit}/>
       </form>);
 
