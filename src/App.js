@@ -67,9 +67,12 @@ class App extends Component {
   }
 
   delete(key) {
-    let addressList = [...this.state.addressList];
-    addressList.splice(key, 1);
-    this.setState({addressList: addressList});
+    var result = window.confirm("Are your sure you want to delete?");
+    if(result) {
+      let addressList = [...this.state.addressList];
+      addressList.splice(key, 1);
+      this.setState({addressList: addressList});
+    }
   }
 
   submit = e => {
