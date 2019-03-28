@@ -63,7 +63,11 @@ class App extends Component {
 
   change = e => {
     e.preventDefault();
-    this.state[e.target.name]= e.target.value;
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+    // Mutate State directly
+    //this.state[e.target.name]= e.target.value;
   }
 
   delete(key) {
@@ -103,10 +107,10 @@ class App extends Component {
       </div>);
 
     const addressForm = (<form className='container'>
-        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change} required />
-        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change} required />
-        <input type='date' name='Birthday' placeholder='DOB' onChange={this.change} required />
-        <input type='tel' name='Telephone' placeholder='Phone Number' onChange={this.change} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required /><br/>
+        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change}/>
+        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change}/>
+        <input type='date' name='Birthday' placeholder='DOB' required onChange={this.change}/>
+        <input type='tel' name='Telephone' placeholder='Phone Number' onChange={this.change} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/><br/>
         <input type="submit" value="Submit" className='button' onClick={this.submit}/>
       </form>);
 
