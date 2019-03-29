@@ -120,6 +120,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
           <p>Your Address Book</p>
+          {this.state.hideForm? <i class="fa fa-search"><span><input type="text" className='fa fa-search' placeholder='Search Contacts..'/></span></i>: <br/>}
           {this.state.hideForm? <button className='button' onClick={this.addAddress}>+ New Address</button>: <br/>}
         </header>
         {this.state.hideForm? <div className="addresses">{allAddress}</div>: <div>{addressForm}</div>}
