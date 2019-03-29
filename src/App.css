@@ -6,22 +6,18 @@
 /*  animation: App-logo-spin infinite 20s linear;*/
   height: 10vmin;
   pointer-events: none;
+  margin-left: 2%;
 }
 
 .App-header {
-  border-top: 20px;
   background-color: #282c34;
-  min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  min-height: 12vh;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 body {
@@ -39,15 +35,6 @@ body {
 
 .button:hover {
   background-color: #3e8e41
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .container {

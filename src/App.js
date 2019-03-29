@@ -117,7 +117,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p><img src={logo} className="App-logo" alt="logo" />Create your personalized address book here!</p>
+          <img src={logo} className="App-logo" alt="logo"/>
+          <p>Your Address Book</p>
           {this.state.hideForm? <button className='button' onClick={this.addAddress}>+ New Address</button>: <br/>}
         </header>
         {this.state.hideForm? <div className="addresses">{allAddress}</div>: <div>{addressForm}</div>}
