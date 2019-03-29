@@ -106,12 +106,12 @@ class App extends Component {
         <input type='button' className='delete' value='Remove' onClick={this.delete.bind(this, key)}/>
       </div>);
 
-    const addressForm = (<form className='container'>
-        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change}/>
-        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change}/>
-        <input type='date' name='Birthday' placeholder='DOB' required onChange={this.change}/>
-        <input type='tel' name='Telephone' placeholder='Phone Number' onChange={this.change} pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/><br/>
-        <input type="submit" value="Submit" className='button' onClick={this.submit}/>
+    const addressForm = (<form className='container' onSubmit={this.submit}>
+        <input type='text' name='FirstName' placeholder='First Name' onChange={this.change} required/>
+        <input type='text' name='LastName' placeholder='Last Name' onChange={this.change} required/>
+        <input type='date' name='Birthday' placeholder='DOB' onChange={this.change} required/>
+        <input type='tel' name='Telephone' placeholder='Phone Number' onChange={this.change} required/>
+        <input type="submit" value="Submit" className='button'/>
       </form>);
 
     return (
