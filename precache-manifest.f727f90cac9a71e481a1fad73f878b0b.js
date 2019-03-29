@@ -8,7 +8,7 @@ self.__precacheManifest = [
     "url": "/address-book/static/js/runtime~main.43c8413f.js"
   },
   {
-    "revision": "6098918976e3f0bc735e",
+    "revision": "18ec34fa0bef12a9feba",
     "url": "/address-book/static/js/main.4c60c1a9.chunk.js"
   },
   {
@@ -16,11 +16,11 @@ self.__precacheManifest = [
     "url": "/address-book/static/js/2.b8d126ee.chunk.js"
   },
   {
-    "revision": "6098918976e3f0bc735e",
-    "url": "/address-book/static/css/main.50913d7c.chunk.css"
+    "revision": "18ec34fa0bef12a9feba",
+    "url": "/address-book/static/css/main.a7f813a8.chunk.css"
   },
   {
-    "revision": "7f135aa9539f5c963f11a532e63175fe",
+    "revision": "98cbeb260074b8a5c98daa07bac4f25d",
     "url": "/address-book/index.html"
   }
 ];

@@ -1,5 +1,5 @@
 {
-  "main.css": "/address-book/static/css/main.50913d7c.chunk.css",
+  "main.css": "/address-book/static/css/main.a7f813a8.chunk.css",
   "main.js": "/address-book/static/js/main.4c60c1a9.chunk.js",
   "main.js.map": "/address-book/static/js/main.4c60c1a9.chunk.js.map",
   "runtime~main.js": "/address-book/static/js/runtime~main.43c8413f.js",
@@ -7,8 +7,8 @@
   "static/js/2.b8d126ee.chunk.js": "/address-book/static/js/2.b8d126ee.chunk.js",
   "static/js/2.b8d126ee.chunk.js.map": "/address-book/static/js/2.b8d126ee.chunk.js.map",
   "index.html": "/address-book/index.html",
-  "precache-manifest.06b723546cc2cc8c49b25a4a331510d0.js": "/address-book/precache-manifest.06b723546cc2cc8c49b25a4a331510d0.js",
+  "precache-manifest.f727f90cac9a71e481a1fad73f878b0b.js": "/address-book/precache-manifest.f727f90cac9a71e481a1fad73f878b0b.js",
   "service-worker.js": "/address-book/service-worker.js",
-  "static/css/main.50913d7c.chunk.css.map": "/address-book/static/css/main.50913d7c.chunk.css.map",
+  "static/css/main.a7f813a8.chunk.css.map": "/address-book/static/css/main.a7f813a8.chunk.css.map",
   "static/media/icon.png": "/address-book/static/media/icon.d82b3f36.png"
 }
