@@ -1,10 +1,3 @@
-#addresses{
-  margin: 30px;
-  width: 50%;
-  display: inline-block;
-  text-align: center;
-}
-
 .App {
   text-align: center;
 }
@@ -29,6 +22,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+body {
+  margin-bottom: 5%;
 }
 
 .button {
@@ -76,10 +73,13 @@
 }
 
 footer {
-  height:25px;
-  color:  #800000;
+  background-color: #282c34;
+  height:20px;
+  width: 100%;
+  color:  #FFDAB9;
   text-align: center;
-  background-color: #FFDAB9;
+  bottom: 0;
+  position: fixed;
 }
 
 input {
