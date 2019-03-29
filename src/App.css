@@ -51,12 +51,16 @@ body {
 }
 
 .delete {
-  background-color: #f9885e;
+  margin: 5%;
+  height: 1.2em;
+  width: 4em;
+  background-color: #77abff;
+  color: red;
   cursor: pointer;
 }
 
 .delete:hover {
-  background-color: red;
+  background-color: #510000;
 }
 
 footer {

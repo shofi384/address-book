@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://shofi384.github.io/address-book/",
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "gh-pages": "^2.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './icon.png';
+import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import './App.css';
 
 class App extends Component {
@@ -103,7 +104,7 @@ class App extends Component {
         <div>Name: {address.FirstName + ' ' + address.LastName}</div>
         <div>DOB: {address.Birthday}</div>
         <div>Tel: {address.Telephone}</div>
-        <input type='button' className='delete' value='Remove' onClick={this.delete.bind(this, key)}/>
+        <i className="delete fa fa-trash" onClick={this.delete.bind(this, key)}> Delete</i>
       </div>);
 
     const addressForm = (<form className='container' onSubmit={this.submit}>
